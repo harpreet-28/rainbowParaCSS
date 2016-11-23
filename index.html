@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rainbow Paragraphs with CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="paraWrap"></div>
+    <script>
+    var _id = function _id(id) {
+        return document.getElementById(id);
+    };
+    var paraWrap = _id('paraWrap');
+
+    var paraGenerator = function paraGenerator() {
+        for (var i = 0; i < 840; i++) {
+            var para = document.createElement('P');
+            para.innerHTML = `Lorem ipsum dolor sit amet, ${i + 1} CSS consectetur adipisicing elit.`
+            paraWrap.appendChild(para);
+        }
+    }
+    paraGenerator();
+    </script>
+</body>
+
+</html>
